@@ -5,6 +5,7 @@ namespace lab2;
 public class MyHashTable
 {
     public List<HashTableElement>[] table;
+    
 
     public MyHashTable(int size)
     {
@@ -28,24 +29,6 @@ public class MyHashTable
     {
         int index = hashFunction(element);
         table[index].Remove(element);
-    }
-
-    public void DeleteArea(int area)
-    {
-        for (int i = 0; i < table.Length; i++)
-        {
-            var bucket = table[i];
-            
-            for (int j = 0; j < bucket.Count; j++)
-            {
-                var element = (Paralelogram) bucket[j];
-                if (element.CalculateArea() < area)
-                {
-                    DeleteItem(element);
-                }
-                
-            }
-        }
     }
 
     public void PrintTable()

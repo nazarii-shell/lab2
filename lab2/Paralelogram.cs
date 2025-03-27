@@ -33,9 +33,10 @@ public class Paralelogram : HashTableElement
         return 2 * (s1 + s2);
     }
 
-    public override string ToString()
+    public override String ToString()
     {
-        return $"V1: ({v1.x}, {v1.y}), V2: ({v2.x}, {v2.y}), V3: ({v3.x}, {v3.y}), V4: ({v4.x}, {v4.y})";
+        // return $"V1: ({v1.x}, {v1.y}), V2: ({v2.x}, {v2.y}), V3: ({v3.x}, {v3.y}), V4: ({v4.x}, {v4.y})";
+        return CalculatePerimeter().ToString();
     }
 
     public override int GetHashCode()
